@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Boxed-Round';
+    src: URL('./font/BoxedRoundBold.ttf') format('truetype');
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    background-image: url("https://source.unsplash.com/random/1920x1080");
+}
+.container {
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 30px;
+}
+.logo {
+    filter: drop-shadow(1px 1px 1px #000);
+}
+.content {
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.row {
+    font-family: 'Boxed-Round';
+    font-size: 32px;
+    letter-spacing: 3px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+}

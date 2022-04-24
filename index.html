@@ -1,44 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
-        <title>Axon - Body Cam</title>
+        <title>Axon - BodyCam</title>
         <meta charset="utf-8" />
         <meta name="author" content="Rafael Araujo">
-        <style type="text/css">
-            @font-face {
-                font-family: 'Boxed-Round';
-                src: URL('./font/BoxedRoundBold.ttf') format('truetype');
-            }
-            html, body {
-                padding: 0;
-                margin: 0;
-            }
-            .container {
-                padding: 10px 40px;
-                display: flex;
-                flex-direction: row-reverse;
-                column-gap: 30px;
-            }
-            .logo {
-                filter: drop-shadow(1px 1px 1px #000);
-            }
-            .content {
-                color: #FFF;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-            .row {
-                font-family: 'Boxed-Round';
-                font-size: 32px;
-                letter-spacing: 3px;
-                -webkit-text-stroke-width: 1px;
-                -webkit-text-stroke-color: #000;
-                display: flex;
-                justify-content: space-between;
-                column-gap: 10px;
-            }
-        </style>
+        <link rel="stylesheet" href="./style.css" type="text/css"/>
     </head>
     <body>
         <div class="container">
@@ -54,29 +20,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            var dateEl = document.getElementById("date");
-            var timeEl = document.getElementById("time");
-            var badgeEl = document.getElementById("badge");
-
-            badgeEl.innerHTML = "X81400924";
-
-            function updateTime() {
-                date = new Date();
-                dateEl.innerHTML = date.getFullYear() + "-";
-                dateEl.innerHTML += date.getDate() + "-";
-                dateEl.innerHTML += (date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1);
-
-                timeEl.innerHTML = "T" + 
-                                    (date.getHours() < 10 ? "0" + date.getHours() : date.getHours())
-                                    + ":" +
-                                    (date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes())
-                                    + ":" +
-                                    (date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds())
-                                    + "Z";
-            }
-
-            setInterval("updateTime()",1000);
-        </script>
+        <script src="./index.js"></script>
     </body>
 </html>
