@@ -1,4 +1,5 @@
-# Axon BodyCam overlay para OBS
+# Axon BodyCam overlay para OBS em tempo real
+ Linguagens utilizadas: HTML, CSS e JavaScript.
 
 - Overlay Bodycam real:
 
