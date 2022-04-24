@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Axon - Body Cam</title>
+        <meta charset="utf-8" />
+        <meta name="author" content="Rafael Araujo">
+        <style type="text/css">
+            @font-face {
+                font-family: 'Boxed-Round';
+                src: URL('./font/BoxedRoundBold.ttf') format('truetype');
+            }
+            html, body {
+                padding: 0;
+                margin: 0;
+            }
+            .container {
+                padding: 10px 40px;
+                display: flex;
+                flex-direction: row-reverse;
+                column-gap: 30px;
+            }
+            .logo {
+                filter: drop-shadow(1px 1px 1px #000);
+            }
+            .content {
+                color: #FFF;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .row {
+                font-family: 'Boxed-Round';
+                font-size: 32px;
+                letter-spacing: 3px;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: #000;
+                display: flex;
+                justify-content: space-between;
+                column-gap: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img class="logo" src="./AXON-DELTA-GOLD.png" width="100px" height="90px"/>
+            <div class="content">
+                <div class="row">
+                    <span id="date">0000-00-00</span>
+                    <span id="time">T00:00:00Z</span>
+                </div>
+                <div class="row">
+                    <span>AXON BODY 2</span>
+                    <span id="badge">X81400000</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            var dateEl = document.getElementById("date");
+            var timeEl = document.getElementById("time");
+            var badgeEl = document.getElementById("badge");
+
+            badgeEl.innerHTML = "X81400924";
+
+            function updateTime() {
+                date = new Date();
+                dateEl.innerHTML = date.getFullYear() + "-";
+                dateEl.innerHTML += date.getDate() + "-";
+                dateEl.innerHTML += (date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1);
+
+                timeEl.innerHTML = "T" + 
+                                    (date.getHours() < 10 ? "0" + date.getHours() : date.getHours())
+                                    + ":" +
+                                    (date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes())
+                                    + ":" +
+                                    (date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds())
+                                    + "Z";
+            }
+
+            setInterval("updateTime()",1000);
+        </script>
+    </body>
+</html>
