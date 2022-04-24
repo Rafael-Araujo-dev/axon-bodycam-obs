@@ -10,7 +10,7 @@
 ![Axon BodyCam overlay](https://user-images.githubusercontent.com/90640158/164993122-62daa593-284c-43fa-b094-e034794894cd.gif)
 
 ## Adicionando overlay
-![Extraindo arquivos](https://i.imgur.com/UitxKRZ.png)
+![Extraindo arquivos](https://i.imgur.com/UMIX0nU.png)
 - Extraia todos os arquivos e armazene no local que desejar.
 
 ![Adicionando uma nova fonte](https://i.imgur.com/QjqY4dD.png)
