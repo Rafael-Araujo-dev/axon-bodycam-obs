@@ -7,7 +7,7 @@ badgeEl.innerHTML = "X81400924";
 function updateTime() {
     date = new Date();
     dateEl.innerHTML = date.getFullYear() + "-";
-    dateEl.innerHTML += date.getDate() + "-";
+    dateEl.innerHTML += (date.getDate() < 10 ? "0" + date.getDate() : date.getDate())+ "-";
     dateEl.innerHTML += (date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1);
 
     timeEl.innerHTML = "T" + 
